@@ -3,17 +3,22 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+:root {
+    --primaryCol: #df1b33;
+}
+
+body {
     font-family: 'Roboto', sans-serif;
     /* background-color: tomato; */
 }
-.container{
+
+.container {
     max-width: 1140px;
     margin: 0 auto;
     padding: .5rem;
 }
 
-.primaryButton{
+.primaryButton {
     background-color: #df1b33;
     color: white;
     font-size: 16px;
@@ -22,6 +27,56 @@ body{
     letter-spacing: 1px;
     cursor: pointer;
 }
+
+.primaryTitle {
+    color: var(--primaryCol);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+.primaryTitle::after{
+    content: "";
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    left: 0;
+    height: 1px;
+    opacity: .7;
+    width: 45%;
+    background-color: red;
+}
+.primaryTitle::before{
+    content: "";
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    right: 0;
+    height: 1px;
+    opacity: .7;
+    width: 45%;
+    background-color: red;
+}
+
+@media screen and (max-width:992px) {
+    .primaryTitle {
+        font-size: 30px;
+    }
+    .primaryTitle::after, .primaryTitle::before {
+        width: 42%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .primaryTitle {
+        font-size: 20px;
+    }
+    .primaryTitle::after, .primaryTitle::before {
+        width: 40%;
+    }
+
+}
+
 /* 
 @media screen and (max-width:992px) {
     body{
