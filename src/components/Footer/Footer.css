@@ -1,0 +1,14 @@
+.footer-container h2{
+ color: rgb(76, 76, 76);
+ font-size: 16px;
+ font-weight: 400;
+ margin-bottom: 1rem;
+}
+.footer-container li a, .footer-container p{
+ color: rgb(76, 76, 76);
+ font-size: 14px;
+ font-weight: 400;
+}
+.footer-container li a:hover{
+    color: rgb(223, 27, 51);   
+}

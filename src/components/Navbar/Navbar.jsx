@@ -79,7 +79,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to={'/contact'}>Contact Us</Link>
+                    <Link className='primaryButton rounded-2xl' to={'/contact'}>Contact Us</Link>
                 </div>
             </div>
         </div>
