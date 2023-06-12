@@ -1,6 +1,7 @@
 
 import { Link } from 'react-router-dom';
-
+import UpperNav from '../UpperNav/UpperNav';
+import logo from '../../assets/navbar/navbarLogo.png'
 const Navbar = () => {
     const menuList = <>
         <li><Link to={'/'}>Home</Link></li>
@@ -58,8 +59,9 @@ const Navbar = () => {
         <li><Link to={"/contact"}>Contact</Link></li>
     </>
     return (
-        <div className='shadow-lg fixed top-0 left-0 w-full'>
-            <div className="navbar bg-base-100 container ">
+        <div className='shadow-lg fixed top-0 left-0 w-full z-10 bg-white'>
+            <UpperNav/>
+            <div className="navbar container ">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -69,7 +71,7 @@ const Navbar = () => {
                             {menuList}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+                    <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[66px] w-[156px]' /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -77,7 +79,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <Link to={'/contact'}>Contact Us</Link>
                 </div>
             </div>
         </div>

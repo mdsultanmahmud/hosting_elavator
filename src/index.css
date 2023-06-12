@@ -1,8 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body{
+    font-family: 'Roboto', sans-serif;
+    /* background-color: tomato; */
+}
 .container{
     max-width: 1140px;
     margin: 0 auto;
 }
+
+
+/* 
+@media screen and (max-width:992px) {
+    body{
+        background-color: green;
+    }
+    
+}
+
+@media screen and (max-width:767px) {
+    body{
+        background-color: red;
+    }
+    
+} */
