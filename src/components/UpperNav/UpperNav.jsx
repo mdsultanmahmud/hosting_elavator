@@ -5,6 +5,7 @@ import { BsTwitter } from 'react-icons/bs'
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai'
 import ukFlag from '../../assets/navbar/uk_flag.png'
 import esFlag from '../../assets/navbar/es_flag.png'
+// eslint-disable-next-line react/prop-types
 const UpperNav = ({prop}) => {
     // eslint-disable-next-line react/prop-types
     const {shownav} = prop

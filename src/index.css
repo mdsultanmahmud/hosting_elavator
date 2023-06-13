@@ -34,6 +34,8 @@ body {
     font-weight: 700;
     text-align: center;
     position: relative;
+    background-color: white;
+    z-index: 2;
 }
 .primaryTitle::after{
     content: "";
@@ -45,6 +47,7 @@ body {
     opacity: .7;
     width: 45%;
     background-color: red;
+    z-index: 0;
 }
 .primaryTitle::before{
     content: "";
@@ -56,6 +59,7 @@ body {
     opacity: .7;
     width: 45%;
     background-color: red;
+    z-index: 0;
 }
 
 @media screen and (max-width:992px) {

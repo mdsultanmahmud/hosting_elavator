@@ -91,7 +91,7 @@ const Navbar = () => {
                             {menuList}
                         </ul>
                     </div>
-                    <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[66px] w-[156px]' /></Link>
+                    <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[86px] w-[156px]' /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider ${shownav ? "text-gray-500" : "text-white"}`}>

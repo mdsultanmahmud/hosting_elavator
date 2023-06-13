@@ -85,7 +85,7 @@ const LatestNews = () => {
                             }
                         </div>
                         <div className='text-center'>
-                            <Link to={'/'} className={`bg-red-500 text-white my-8 font-bold text-lg px-6 py-3 rounded ${showTab == "news" ? "inline-block" : "hidden"}`}>Read More</Link>
+                            <Link to={'/'} className={`bg-red-500 text-white mt-8 font-bold text-lg px-6 py-3 rounded ${showTab == "news" ? "inline-block" : "hidden"}`}>Read More</Link>
                         </div>
                     </div>
                 </div>

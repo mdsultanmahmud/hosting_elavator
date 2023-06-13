@@ -1,0 +1,76 @@
+
+.title {
+    color: var(--primaryCol);
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    background-color: white;
+    z-index: 2;
+}
+.title::after{
+    content: "";
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    left: 0;
+    height: 1px;
+    opacity: .7;
+    width: 27%;
+    background-color: red;
+    z-index: 0;
+}
+.title::before{
+    content: "";
+    position: absolute;
+    top: 50%;   
+    transform: translateY(-50%);
+    right: 0;
+    height: 1px;
+    opacity: .7;
+    width: 27%;
+    background-color: red;
+    z-index: 0;
+}
+
+@media screen and (max-width:992px) {
+    .title {
+        font-size: 30px;
+    }
+    .title::after, .title::before {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .title {
+        font-size: 20px;
+    }
+    .title::after, .title::before {
+        width: 15%;
+    }
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
