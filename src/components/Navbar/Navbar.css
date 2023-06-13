@@ -1,17 +1,5 @@
-.custom-nav{
-    background-color: black!important;
-    color: white;
-}
-.scrolled{
-    background-color: rgba(0, 0, 0, 0.6)!important;
-    color: white;
-}
-.custom-nav ul li a{
-    font-weight: 600;
-}
-
-.sm-nav li {
-    background-color: #55acee;
-    border-radius: 0!important;
-    margin-bottom: 5px;
+@media screen and (max-width:992px) {
+    .custom-nav{
+        background-color: white;
+    }
 }

@@ -2,7 +2,27 @@
 import { Link } from 'react-router-dom';
 import UpperNav from '../UpperNav/UpperNav';
 import logo from '../../assets/navbar/navbarLogo.png'
+import {FaBars} from 'react-icons/fa'
+import { useEffect, useState } from 'react';
+import './Navbar.css'
 const Navbar = () => {
+    const [shownav, setShowNav] = useState(false)
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollY = window.scrollY || window.pageYOffset;
+            if (scrollY >= 170) {
+                setShowNav(true)
+            } else {
+                setShowNav(false)
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
     const menuList = <>
         <li><Link to={'/'}>Home</Link></li>
         <li tabIndex={0}>
@@ -10,7 +30,7 @@ const Navbar = () => {
                 <summary>
                     <Link to={'/about'}>About</Link>
                 </summary>
-                <ul className="p-2">
+                <ul className="p-2 text-gray-500 text-[16px]">
                     <li><a>Company Profile</a></li>
                     <li><a>Factory View</a></li>
                     <li><a>Certificates</a></li>
@@ -24,7 +44,7 @@ const Navbar = () => {
                 <summary>
                     <Link to={'/products'}>Products</Link>
                 </summary>
-                <ul className="p-2">
+                <ul className="p-2 text-gray-500 text-[16px]">
                     <li><a>Passenger Elevator</a></li>
                     <li><a>Home Elevator</a></li>
                     <li><a>Panoramic Elevator</a></li>
@@ -38,7 +58,7 @@ const Navbar = () => {
         <li tabIndex={0}>
             <details>
                 <summary><Link to={'/projects'}>Projects</Link></summary>
-                <ul className="p-2">
+                <ul className="p-2 text-gray-500 text-[16px]">
                     <li><a>Overeases Project</a></li>
                     <li><a>Domestic Project</a></li>
                 </ul>
@@ -48,7 +68,7 @@ const Navbar = () => {
         <li tabIndex={0}>
             <details>
                 <summary><Link to={'/blog'}>Blog</Link></summary>
-                <ul className="p-2">
+                <ul className="p-2 text-gray-500 text-[16px]">
                     <li><a>Exhibition and news</a></li>
                     <li><a>Articles</a></li>
                 </ul>
@@ -59,27 +79,27 @@ const Navbar = () => {
         <li><Link to={"/contact"}>Contact</Link></li>
     </>
     return (
-        <div className='shadow-lg fixed top-0 left-0 w-full z-10 bg-white'>
-            <UpperNav/>
-            <div className="navbar container ">
+        <div className={`fixed top-0 left-0 w-full z-10 ${shownav ? 'shadow-lg bg-white' : 'bg-transparent'}`}>
+            <UpperNav prop={{shownav}}/>
+            <div className="navbar container custom-nav">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden fixed top-4 right-3 text-black font-bold">
+                           <FaBars size={22}/>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className="text-[14px] menu menu-sm dropdown-content mt-8 p-8 bg-base-100  w-[100vw] ml-[-10px]  text-gray-500">
                             {menuList}
                         </ul>
                     </div>
                     <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[66px] w-[156px]' /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider ${shownav ? "text-gray-500" : "text-white"}`}>
                         {menuList}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className='primaryButton rounded-2xl' to={'/contact'}>Contact Us</Link>
+                    <Link className='mr-[3rem] lg:mr-0 primaryButton  rounded-xl md:rounded-2xl' to={'/contact'}>Contact Us</Link>
                 </div>
             </div>
         </div>
