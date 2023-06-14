@@ -79,7 +79,7 @@ const Navbar = () => {
         <li><Link to={"/contact"}>Contact</Link></li>
     </>
     return (
-        <div className={`fixed top-0 left-0 w-full z-10 ${shownav ? 'shadow-lg bg-white' : 'bg-transparent'}`}>
+        <div className={`fixed top-0 left-0 w-full z-10 shadow-lg bg-white`}>
             <UpperNav prop={{shownav}}/>
             <div className="navbar container custom-nav">
                 <div className="navbar-start">
@@ -94,7 +94,7 @@ const Navbar = () => {
                     <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[86px] w-[156px]' /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider ${shownav ? "text-gray-500" : "text-white"}`}>
+                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider text-black`}>
                         {menuList}
                     </ul>
                 </div>

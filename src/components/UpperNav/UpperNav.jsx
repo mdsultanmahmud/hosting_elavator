@@ -13,14 +13,14 @@ const UpperNav = ({prop}) => {
     return (
         <div className={`hidden md:block`}>
             <div className={`container flex justify-between items-center ${shownav ? "hidden" : ""}`}>
-                <div className='flex items-center gap-x-3 text-white text-[12px]'>
+                <div className='flex items-center gap-x-3 text-black text-[12px]'>
                     <p>Welcome to </p>
                     <span>|</span>
                     <p className='flex items-center gap-x-1'><CgMail /> <span>usoverseas@nbxd.com</span></p>
                     <span>|</span>
                     <p className='flex items-center gap-x-1'><IoMdCall /> <span>0086-574-88336262</span></p>
                 </div>
-                <div className='flex gap-x-12 items-center text-white'>
+                <div className='flex gap-x-12 items-center text-black'>
                     <div className='flex items-center gap-x-2'>
                         <CiFacebook size={22}  className='hover:text-red-500 cursor-pointer' />
                         <BsTwitter size={22}   className='hover:text-red-500 cursor-pointer' />
