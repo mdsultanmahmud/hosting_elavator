@@ -84,8 +84,8 @@ const Navbar = () => {
             <div className="navbar container custom-nav">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <label tabIndex={0} className="btn btn-ghost lg:hidden fixed top-4 right-3 text-black font-bold">
-                           <FaBars size={22}/>
+                        <label tabIndex={0} className="btn btn-ghost lg:hidden fixed top-7 md:top-4 right-3 text-black font-bold">
+                           <FaBars size={24}/>
                         </label>
                         <ul tabIndex={0} className="text-[14px] menu menu-sm dropdown-content mt-8 p-8 bg-base-100  w-[100vw] ml-[-10px]  text-gray-500">
                             {menuList}

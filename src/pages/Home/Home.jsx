@@ -1,3 +1,4 @@
+import AllElevator from "../../components/AllElevator/AllElevator";
 import Banner from "../../components/Banner/Banner";
 import Elevator from "../../components/Elevator/Elevator";
 import ElevatorMenu from "../../components/ElevatorMenu/ElevatorMenu";
@@ -11,6 +12,7 @@ const Home = () => {
             <Banner />
             <ElevatorMenu />
             <Elevator/>
+            <AllElevator/>
             <Video/>
             <LatestNews/>
             <Quote />
