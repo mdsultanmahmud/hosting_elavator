@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Loyout from "../layouts/Loyout";
 import Home from "../pages/Home/Home";
-import About from "../pages/About/About";
 import Product from "../pages/Product/Product";
 import Modernization from "../pages/Modernization/Modernization";
 import Projects from "../pages/Projects/Projects";
@@ -9,6 +8,12 @@ import Download from "../pages/Download/Download";
 import Blog from "../pages/Blog/Blog";
 import Agent from "../pages/Agent/Agent";
 import Contact from "../pages/Contact/Contact";
+import VideoDetails from "../subPages/ShowVideo/VideoDetails";
+import CompanyProfile from "../subPages/CompanyProfile/CompanyProfile";
+import FactoryView from "../subPages/FactoryView/FactoryView";
+import Certificate from "../subPages/Certificate/Certificate";
+import FAQ from "../subPages/FAQ/FAQ";
+import ShowVideo from "../subPages/ShowVideo/ShowVideo";
 
 const router = createBrowserRouter([
     {
@@ -20,12 +25,33 @@ const router = createBrowserRouter([
                 element:<Home/>
             },
             {
-                path:'/about',
-                element:<About/>
+                path:"/company-profile",
+                element:<CompanyProfile/>
             },
+            {
+                path:"/factory-view",
+                element:<FactoryView/>
+            },
+            {
+                path:"/certificate",
+                element:<Certificate/>
+            },
+            {
+                path:"/faq",
+                element:<FAQ/>
+            },
+            {
+                path:"/video",
+                element:<ShowVideo/>
+            },
+            
             {
                 path:'/products',
                 element: <Product/>
+            },
+            {
+                path:"/video/:id",
+                element: <VideoDetails/>
             },
             {
                 path:'/modernization',

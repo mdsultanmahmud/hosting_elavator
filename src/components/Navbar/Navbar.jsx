@@ -28,14 +28,14 @@ const Navbar = () => {
         <li tabIndex={0}>
             <details>
                 <summary>
-                    <Link to={'/about'}>About</Link>
+                    <Link to={'/company-profile'}>About</Link>
                 </summary>
                 <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><a>Company Profile</a></li>
-                    <li><a>Factory View</a></li>
-                    <li><a>Certificates</a></li>
-                    <li><a>FAQ</a></li>
-                    <li><a>Video</a></li>
+                    <li><Link to={'/company-profile'}>Company Profile</Link></li>
+                    <li><Link to={'/factory-view'}>Factory View</Link></li>
+                    <li><Link to={'/certificate'}>Certificates</Link></li>
+                    <li><Link to={'/faq'}>FAQ</Link></li>
+                    <li><Link to={'/video'}>Video</Link></li>
                 </ul>
             </details>
         </li>
