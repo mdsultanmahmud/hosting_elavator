@@ -1,0 +1,15 @@
+.button-container h2{
+    color: black;
+    font-size: 19px;
+    font-weight: 700;
+    padding:.5rem;
+    cursor: pointer;
+} 
+.button-container h2:hover{
+    color: red;
+}
+
+.activeBtn{
+    color: red !important;
+    border-bottom: 2px solid red;
+}

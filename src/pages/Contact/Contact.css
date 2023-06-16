@@ -1,23 +1,3 @@
-.img-section {
-    position: relative;
-}
-
-.img-section h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: red;
-    font-size: 3.2rem;
-    font-weight: 500;
-    border-bottom: 4px solid red;
-}
-
-.img-section img {
-    height: auto;
-    width: 100%;
-    object-fit: cover;
-}
 
 .contact-container h2 {
     color: black;

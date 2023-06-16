@@ -2,8 +2,9 @@ import { Link } from "react-router-dom";
 import logo from '../../assets/navbar/navbarLogo.png'
 import { CiFacebook } from 'react-icons/ci'
 import { BsTwitter } from 'react-icons/bs'
-import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai'
+import { AiFillHome, AiFillPhone, AiOutlineGlobal, AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai'
 import './Footer.css'
+import { CgMail } from "react-icons/cg";
 const Footer = () => {
     return (
         <footer className="footer-container">
@@ -11,8 +12,13 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-12 gap-8">
                     <div>
                         <img src={logo} alt="logo of the company" width={156} height={56} />
-                        <p>Dongwu Town, Yinzhou District, Ningbo City, Zhejiang Province, P. R. China</p>
-                        <p>overseas@nbxd.com ｜ 0086-574-88336262</p>
+                        <p className="flex gap-x-2 items-start mb-2"><AiFillHome size={22} className='text-red-500' /> <span> House 664/A, Road # 09 (Main Road), DOHS Mirpur, Dhaka – 1216.</span></p>
+                        {/* <p>overseas@nbxd.com ｜ 0086-574-88336262</p>
+                        <h4>Elevator Engineers Ltd.</h4> */}
+                        <p className="flex gap-x-2 items-start mb-2"><AiFillPhone size={22} className='text-red-500' /> <span>88-02-44806324</span></p>
+                        <p className="flex gap-x-2 items-start mb-2"><CgMail size={22} className='text-red-500' /> <span>elevatorengineersltd@gmail.com</span></p>
+                        <p className="flex gap-x-2 items-start mb-2"><AiOutlineGlobal size={22} className='text-red-500' /> <span>www.elevatorbd.net</span></p>
+                        
                         <div className='flex items-center gap-x-2 mt-2'>
                             <CiFacebook />
                             <BsTwitter />

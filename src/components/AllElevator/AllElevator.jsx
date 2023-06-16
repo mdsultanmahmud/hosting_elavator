@@ -17,41 +17,41 @@ const AllElevator = () => {
             <div className='container'>
                 <div className='allElevator-content'>
                     {/* for the small and medium devices  */}
-                    <div>
-                        <div className='button-container'>
-                            <div onClick={() => setShowBtn(!showBtn)} className='flex justify-between py-2 px-4 border border-gray-500 rounded'>
-                                {
-                                    !showBtn ?
-                                        <FaBars size={24} />
-                                        :
-                                        <ImCross size={20} />
-                                }
-                                <h3 className='text-gray-500 text-[12px] flex items-center gap-x-6'><IoMdArrowDropdown size={24} /> <span>Menu</span></h3>
-                            </div>
-                            <div className={`all-button ${showBtn ? 'activeAllBtn' : ''}`}>
-                                <button onClick={() => {
-                                    setUrl(e1)
-                                    setText("Leading Passenger Elevator Manufacturer")
-                                }
-                                } className={`${url == e1 ? "active" : ''}`}>Passenger Elavator</button>
-                                <button onClick={() => {
-                                    setUrl(e2)
-                                    setText("Home/Residential Elevator Manufacturer&Supplier")
-                                }
-                                } className={`${url == e2 ? "active" : ''}`}>Home Elavator</button>
-                                <button onClick={() => {
-                                    setUrl(e3)
-                                    setText("Panoramic/Observation Elevator Manufacturing & Solution")
-                                }
-                                } className={`${url == e3 ? "active" : ''}`}>Panoramic Elavator</button>
-                                <button onClick={() => {
-                                    setUrl(e4)
-                                    setText("Escalators & Moving Walks Manufacturer&Supplier")
-                                }
-                                } className={`${url == e4 ? "active" : ''}`}>Escalator & Moving Walks</button>
-                            </div>
+
+                    <div className='button-container lg:hidden'>
+                        <div onClick={() => setShowBtn(!showBtn)} className='flex justify-between py-2 px-4 border border-gray-500 rounded'>
+                            {
+                                !showBtn ?
+                                    <FaBars size={24} />
+                                    :
+                                    <ImCross size={20} />
+                            }
+                            <h3 className='text-gray-500 text-[12px] flex items-center gap-x-6'><IoMdArrowDropdown size={24} /> <span>Menu</span></h3>
+                        </div>
+                        <div className={`all-button ${showBtn ? 'activeAllBtn' : ''}`}>
+                            <button onClick={() => {
+                                setUrl(e1)
+                                setText("Leading Passenger Elevator Manufacturer")
+                            }
+                            } className={`${url == e1 ? "active" : ''}`}>Passenger Elavator</button>
+                            <button onClick={() => {
+                                setUrl(e2)
+                                setText("Home/Residential Elevator Manufacturer&Supplier")
+                            }
+                            } className={`${url == e2 ? "active" : ''}`}>Home Elavator</button>
+                            <button onClick={() => {
+                                setUrl(e3)
+                                setText("Panoramic/Observation Elevator Manufacturing & Solution")
+                            }
+                            } className={`${url == e3 ? "active" : ''}`}>Panoramic Elavator</button>
+                            <button onClick={() => {
+                                setUrl(e4)
+                                setText("Escalators & Moving Walks Manufacturer&Supplier")
+                            }
+                            } className={`${url == e4 ? "active" : ''}`}>Escalator & Moving Walks</button>
                         </div>
                     </div>
+
                     <div className='hidden lg:flex items-center  justify-center gap-x-8'>
                         <button onClick={() => {
                             setUrl(e1)
