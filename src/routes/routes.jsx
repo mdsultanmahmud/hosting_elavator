@@ -51,7 +51,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"/video/:id",
-                element: <VideoDetails/>
+                element: <VideoDetails/> 
             },
             {
                 path:'/modernization',

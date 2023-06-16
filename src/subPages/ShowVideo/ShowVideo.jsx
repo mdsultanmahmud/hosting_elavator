@@ -20,7 +20,7 @@ const ShowVideo = () => {
                 <AboutButton text={"video"}/>
                 <div className={`grid grid-cols-2 md:grid-cols-3 gap-8 video-container`}>
                     {
-                        videos.map((video) => <Link to={`/video/${video.id}`} key={video.id}>
+                        videos.map((video) => <Link state={{video}} to={`/video/${video.id}`} key={video.id}>
                             <div className="relative img-section">
                                 <img src={video.img} alt="" className="drop-shadow-lg" />
                                 <AiOutlineYoutube size={44} className="absolute top-[50%] left-[50%] -translate-x-2/4 -translate-y-2/4 icon" />
