@@ -76,7 +76,6 @@ const Navbar = () => {
 
         </li>
         <li><Link to={"/agent"}>Agent</Link></li>
-        <li><Link to={"/contact"}>Contact</Link></li>
     </>
     return (
         <div className={`fixed top-0 left-0 w-full z-10 shadow-lg bg-white`}>

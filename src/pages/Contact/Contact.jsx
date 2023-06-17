@@ -19,7 +19,8 @@ const Contact = () => {
                             <p><AiFillHome size={22} className='text-red-500' /> <span> House 664/A, Road # 09 (Main Road), DOHS Mirpur, Dhaka – 1216.</span></p>
                         </div>
                         <div className='w-full md:w-[67%]'>
-                            <ContactForm/>
+                        <ContactForm 
+                        property={{cap: "Enter your inquiry details, We will reply you in 24 hours.",cap2:"Contact Us Now", type: {name:"*Name",  email: "*Email", company:"Company", telephone: "Phone", textArea: "Message", product: "Products you want"}}}/>
                         </div>
                     </div>
                 </div>
