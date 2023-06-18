@@ -4,7 +4,7 @@ import contact from '../../assets/others/contact.webp'
 const BannerBG = ({title}) => {
     return (
         <div className='img-section'>
-            <img src={contact} alt="img of the banner section" />   
+            <img src={contact} alt="img of the banner section" />    
             <h3>{title}</h3>
         </div>
     );

@@ -45,12 +45,12 @@ const Navbar = () => {
                     <Link to={'/products'}>Products</Link>
                 </summary>
                 <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><a>Passenger Elevator</a></li>
-                    <li><a>Home Elevator</a></li>
-                    <li><a>Panoramic Elevator</a></li>
-                    <li><a>Hospital Elevator</a></li>
-                    <li><a>Freight Elevator</a></li>
-                    <li><a>Escalators & Moving Walks</a></li>
+                    <li><Link to={'/passenger-elevator'}>Passenger Elevator</Link></li>
+                    <li><Link to={'/home-elevator'}>Home Elevator</Link></li>
+                    <li><Link to={'/panoramic-elevator'}>Panoramic Elevator</Link></li>
+                    <li><Link to={'/hospital-elevator'}>Hospital Elevator</Link></li>
+                    <li><Link to={'/freight-elevator'}>Freight Elevator</Link></li>
+                    <li><Link to={'/escalators-moving-walks'}>Escalators & Moving Walks</Link></li>
                 </ul>
             </details>
         </li>

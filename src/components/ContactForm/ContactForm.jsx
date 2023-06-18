@@ -4,7 +4,7 @@ const ContactForm = ({property}) => {
     console.log(cap, type)
     return (
         <>
-            {cap2 && <h2 className="text-start">{cap2}</h2>}
+            {cap2 && <h2 className="text-start text-[1.5rem] md:text-[2rem] font-bold my-6">{cap2}</h2>}
             <div className='rounded drop-shadow-lg border p-0 m-0'>
                 <p className='p-3 mt-0 bg-[#f1f1f2] rounded-t-lg'>{cap}</p>
                 <form className='p-6'>
