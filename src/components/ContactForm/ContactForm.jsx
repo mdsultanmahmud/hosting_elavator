@@ -6,7 +6,7 @@ const ContactForm = ({property}) => {
         <>
             {cap2 && <h2 className="text-start text-[1.5rem] md:text-[2rem] font-bold my-6">{cap2}</h2>}
             <div className='rounded drop-shadow-lg border p-0 m-0'>
-                <p className='p-3 mt-0 bg-[#f1f1f2] rounded-t-lg'>{cap}</p>
+                {cap && <p className='p-3 mt-0 bg-[#f1f1f2] rounded-t-lg'>{cap}</p>}
                 <form className='p-6'>
                     <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                         {type.name && <input type="text" placeholder={type.name} required />}
