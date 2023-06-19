@@ -21,9 +21,10 @@ const CompanyProfile = () => {
                     <hr />
                     <div className='my-6'>
                         <h1>Hosting Company Video Overview</h1>
-                        <iframe src="https://www.youtube.com/embed/kJiDuZJLdXQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        {/* <iframe src="https://www.youtube.com/embed/kJiDuZJLdXQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <iframe src="https://www.youtube.com/embed/h9aGGwQXPKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/ZrXrE2TuEtQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/ZrXrE2TuEtQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                        <p>vidoe will be upload..</p>
                     </div>
                     <hr />
                     <div className='my-6'>

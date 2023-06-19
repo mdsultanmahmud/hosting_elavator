@@ -19,7 +19,7 @@ const ShowVideo = () => {
             <div className="container">
                 <AboutButton text={"video"}/>
                 <div className={`grid grid-cols-2 md:grid-cols-3 gap-8 video-container`}>
-                    {
+                    {/* {
                         videos.map((video) => <Link state={{video}} to={`/video/${video.id}`} key={video.id}>
                             <div className="relative img-section">
                                 <img src={video.img} alt="" className="drop-shadow-lg" />
@@ -27,7 +27,8 @@ const ShowVideo = () => {
                             </div>
                             <h4>{video.name}</h4>
                         </Link>)
-                    }
+                    } */}
+                    <h1>video will be upload</h1>
                 </div>
             </div>
         </div>
