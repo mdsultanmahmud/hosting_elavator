@@ -1,5 +1,5 @@
 import './ElevatorMenu.css'
-import img from '../../assets/banner/bannerbg.jpg'
+import img from '../../assets/banner/descption.jpg'
 import {AiOutlinePlus} from 'react-icons/ai'
 const ElevatorMenu = () => {
     return (
@@ -10,8 +10,9 @@ const ElevatorMenu = () => {
                         <img src={img} alt="" />
                    </div>
                    <div className='p-8 text-center bg-[#df1b33]'>
-                        <h2>Leading Elevator Manufacturer in China</h2>
-                        <p>Hosting is the most popular elevator manufacturer in China. The main business is to provide customized elevator services for elevator distributors and elevator companies worldwide. Our cooperative customers include FUJITEC, SCHINDLER, HYUNDAI, and another famous brand.</p>
+                        <h2>Promoting the World-Renowned Global Brad OTIS in Bangladesh</h2>
+                        <p>The OTIS ELEVATOR COMPANY can trace its origins to 1853 in New York City. The first passenger elevator was installed in New York City in 1856. The company was founded in 1853 after Elisha Otis invented the <strong>elevator safety brake, a mechanism that automatically locks the elevator if the hoisting rope breaks.</strong> </p>
+                        <p>The Otis elevator is universally acknowledged as one of the best in the world. These elevators can be found in iconic buildings such as the Eiffel Tower, the Empire State Building, and Burj Khalifa. Otis offers products and services through its companies in approximately 200 countries and territories</p>
                         <button><AiOutlinePlus size={30}/></button>
                    </div>
                 </div>

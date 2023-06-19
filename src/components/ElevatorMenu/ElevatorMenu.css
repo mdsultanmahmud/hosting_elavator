@@ -1,7 +1,7 @@
 
 .elevatro-content{
-    height: 330px;
-    overflow: hidden;
+    /* height: 330px;
+    overflow: hidden; */
 }
 .elevatro-content img{
     width: 100%;
@@ -10,7 +10,7 @@
 }
 .elevatro-content h2{
     color: white;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 600;
     letter-spacing: .14px;
 }
@@ -19,7 +19,7 @@
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: .14px;
-    margin: 1rem;
+    margin: 0.7rem;
 }
 .elevatro-content button{
     background-color: white;

@@ -1,20 +1,21 @@
 import './Banner.css'
-import bannerOne from '../../assets/banner/bannerbg.jpg'
-import bannerTwo from '../../assets/banner/bannertwo.webp'
-import bannerThree from '../../assets/banner/bannerthree.webp'
+import bannerOne from '../../assets/banner/bgOne.jpg'
+import bannerTwo from '../../assets/banner/bannerTwo.jpg'
+import bannerThree from '../../assets/banner/bannerThree.jpg'
+import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div className="carousel w-full z-0 h-[90vh]">
+        <div className="carousel w-full z-0 h-[100vh]">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={bannerOne} className="w-full" />
                 <div className='bg-color'></div>
                 <div className='banner-content'>
-                    <h2>The Leading Elevator Manufacturer in China</h2>
-                    <h3>Since 1993</h3>
-                    <p><span>1,000,000+</span> elevators & escalators Serving in the world today</p>
-                    <p><span>Independent </span> research and development and manufacturing of core components</p>
-                    <p><span>One-stop service,</span> from raw materials to production to packaging to transportation to Ningbo Port</p>
-                    <button className='bannerButton'>Request A Quote</button>
+                    <h2>The Elevator Business Leader in Bangladesh</h2>
+                    <h3>since 2005</h3>
+                    <p><span>300+</span>  elevators and escalators serving the country</p>
+                    <p><span>Independent </span> modernization and service team</p>
+                    <p><span>One-stop service,</span> for repair and modernization</p>
+                    <Link to={'/contact'} ><button className='bannerButton'>Contact Us</button></Link>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide4" className="btn btn-circle">❮</a>
@@ -25,12 +26,12 @@ const Banner = () => {
                 <img src={bannerTwo} className="w-full" />
                 <div className='bg-color'></div>
                 <div className='banner-content'>
-                    <h2>The Leading Elevator Manufacturer in China</h2>
-                    <h3>Since 1993</h3>
-                    <p><span>1,000,000+</span> elevators & escalators Serving in the world today</p>
-                    <p><span>Independent </span> research and development and manufacturing of core components</p>
-                    <p><span>One-stop service,</span> from raw materials to production to packaging to transportation to Ningbo Port</p>
-                    <button className='bannerButton'>Request A Quote</button>
+                    <h2>The Elevator Business Leader in Bangladesh</h2>
+                    <h3>since 2005</h3>
+                    <p><span>300+</span>  elevators and escalators serving the country</p>
+                    <p><span>Independent </span> modernization and service team</p>
+                    <p><span>One-stop service,</span> for repair and modernization</p>
+                    <Link to={'/contact'} ><button className='bannerButton'>Contact Us</button></Link>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide1" className="btn btn-circle">❮</a>
@@ -41,12 +42,12 @@ const Banner = () => {
                 <img src={bannerThree} className="w-full" />
                 <div className='bg-color'></div>
                 <div className='banner-content'>
-                    <h2>The Leading Elevator Manufacturer in China</h2>
-                    <h3>Since 1993</h3>
-                    <p><span>1,000,000+</span> elevators & escalators Serving in the world today</p>
-                    <p><span>Independent </span> research and development and manufacturing of core components</p>
-                    <p><span>One-stop service,</span> from raw materials to production to packaging to transportation to Ningbo Port</p>
-                    <button className='bannerButton'>Request A Quote</button>
+                    <h2>The Elevator Business Leader in Bangladesh</h2>
+                    <h3>since 2005</h3>
+                    <p><span>300+</span>  elevators and escalators serving the country</p>
+                    <p><span>Independent </span> modernization and service team</p>
+                    <p><span>One-stop service,</span> for repair and modernization</p>
+                    <Link to={'/contact'} ><button className='bannerButton'>Contact Us</button></Link>
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                     <a href="#slide2" className="btn btn-circle">❮</a>
