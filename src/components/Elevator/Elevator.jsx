@@ -19,9 +19,9 @@ const Elevator = () => {
         <div>
             <div className='container'>
                 <div>
-                    <h1 className='title'>Elevators We Make For You</h1>
+                    <h1 className='title'>Promoting the world renowned global brand OTIS  in Bangladesh</h1>
 
-                    <div className='mt-12'>
+                    <div className='mt-12 elevatorContent'>
                         <Swiper
                             navigation={true}
                             modules={[Navigation]}
@@ -37,7 +37,7 @@ const Elevator = () => {
                                 },
                                 // Default for larger screens
                                 1200: {
-                                  slidesPerView: 3,
+                                  slidesPerView: 4,
                                 },
                               }}
                         >
