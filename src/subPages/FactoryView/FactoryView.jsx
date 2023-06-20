@@ -9,8 +9,15 @@ import fac5 from '../../assets/about/fac5.webp'
 import fac6 from '../../assets/about/fac6.webp'
 import fac7 from '../../assets/about/fac7.webp'
 import fac8 from '../../assets/about/fac8.webp'
+import { useContext } from "react";
+import { NavbarContext } from "../../context/ContextProvider";
 // eslint-disable-next-line react/prop-types
 const FactoryView = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     const facs1 = [
         {
             id: 1,

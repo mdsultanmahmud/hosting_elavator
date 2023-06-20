@@ -1,11 +1,17 @@
-import { useEffect, useState } from "react";
-import { AiOutlineYoutube } from 'react-icons/ai'
-import { Link } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+// import { AiOutlineYoutube } from 'react-icons/ai'
+// import { Link } from "react-router-dom";
 import BannerBG from "../../components/BannerBG/BannerBG";
 import AboutButton from "../../components/AboutButton/AboutButton";
 import './ShowVideo.css'
+import { NavbarContext } from "../../context/ContextProvider";
 // eslint-disable-next-line react/prop-types
 const ShowVideo = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     const [videos, setVides] = useState([])
     useEffect(() => {
         fetch("videos.json")

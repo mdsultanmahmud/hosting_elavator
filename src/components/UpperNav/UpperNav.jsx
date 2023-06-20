@@ -5,26 +5,27 @@ import { BsTwitter } from 'react-icons/bs'
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai'
 import ukFlag from '../../assets/navbar/uk_flag.png'
 import esFlag from '../../assets/navbar/es_flag.png'
+import '../Navbar/Navbar.css'
 // eslint-disable-next-line react/prop-types
 const UpperNav = ({prop}) => {
     // eslint-disable-next-line react/prop-types
-    const {shownav} = prop
+    const {shownav, isBanner} = prop
     return (
         <div className={`hidden md:block`}>
-            <div className={`container flex justify-between items-center ${shownav ? "hidden" : ""}`}>
-                <div className='flex items-center gap-x-3 text-black text-[12px]'>
+            <div className={`container flex justify-between items-center ${shownav ? "hidden" : ""} uppContent`}>
+                <div className={`flex items-center gap-x-3 text-[12px] ${isBanner && !shownav  ? "text-white" : "text-black"} `}>
                     <p>Welcome to </p>
                     <span>|</span>
                     <p className='flex items-center gap-x-1'><CgMail /> <span>elevatorengineersltd@gmail.com</span></p>
                     <span>|</span>
                     <p className='flex items-center gap-x-1'><IoMdCall /> <span>88-02-44806324</span></p>
                 </div>
-                <div className='flex gap-x-12 items-center text-black'>
+                <div className={`flex gap-x-12 items-center ${isBanner && !shownav  ? "text-white" : "text-black"}`}>
                     <div className='flex items-center gap-x-2'>
-                        <CiFacebook size={22}  className='hover:text-red-500 cursor-pointer' />
-                        <BsTwitter size={22}   className='hover:text-red-500 cursor-pointer' />
-                        <AiOutlineInstagram size={22}  className='hover:text-red-500 cursor-pointer' />
-                        <AiOutlineYoutube size={22}    className='hover:text-red-500 cursor-pointer' />
+                        <CiFacebook size={22}  className='hover:text-red-500 cursor-pointer icon' />
+                        <BsTwitter size={22}   className='hover:text-red-500 cursor-pointer icon' />
+                        <AiOutlineInstagram size={22}  className='hover:text-red-500 cursor-pointer icon' />
+                        <AiOutlineYoutube size={22}    className='hover:text-red-500 cursor-pointer icon' />
                     </div>
                     <div>
                         <div className="dropdown">

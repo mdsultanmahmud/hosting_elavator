@@ -9,7 +9,14 @@ import prod4 from '../../assets/Products/prod4.webp'
 import prod5 from '../../assets/Products/prod5.webp'
 import prod6 from '../../assets/Products/prod6.webp'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { NavbarContext } from '../../context/ContextProvider';
 const Product = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     const pages = [
         {
             id:1,

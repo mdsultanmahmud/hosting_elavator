@@ -1,7 +1,14 @@
+import { useContext } from 'react';
 import BannerBG from '../../components/BannerBG/BannerBG';
 import ContactForm from '../../components/ContactForm/ContactForm';
 import './Agent.css'
+import { NavbarContext } from '../../context/ContextProvider';
 const Agent = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     return (
         <div className='marginTop'>
             <BannerBG title={"Agent"}/>

@@ -2,9 +2,15 @@ import AboutButton from "../../components/AboutButton/AboutButton";
 import BannerBG from "../../components/BannerBG/BannerBG";
 import { MdKeyboardArrowUp } from 'react-icons/md'
 import './FAQ.css'
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NavbarContext } from "../../context/ContextProvider";
 // eslint-disable-next-line react/prop-types
 const FAQ = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     // const [toggle, setToggle] = useState(false)
 
     const allFaq = [

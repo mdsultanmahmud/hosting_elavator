@@ -1,3 +1,35 @@
+
+.navContainer:hover{
+    background-color: white;
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+.navContainer:hover  ul{
+    color: black;
+}
+
+.navContainer:hover .uppContent p{
+    color: black;
+}
+.navContainer:hover .uppContent span{
+    color: black;
+}
+.navContainer:hover  .icon{
+    color: black;
+}
+.navContainer:hover .uppContent label{
+    color: black !important;
+}
+
+.custom-nav ul li a:hover{
+   background: none;
+   outline: none;
+}
+/* .custom-nav ul li a:focus{
+    color: white;
+} */
+.custom-nav ul summary:active{
+    background:none;
+}
 @media screen and (max-width:992px) {
     .custom-nav{
         background-color: white;

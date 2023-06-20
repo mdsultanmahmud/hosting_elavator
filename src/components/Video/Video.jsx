@@ -21,7 +21,7 @@ const Video = () => {
                     <h1 className="primaryTitle">Video</h1>
                     <div className='md-video-content p-4 mt-8 mb-4 lg:hidden'>
                         <div>
-                            <iframe src={videos[index]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe >
+                            <iframe src={videos[index]} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe >
                         </div>
                         <div className='flex justify-between items-center mt-6'>
                             <button onClick={() => {
@@ -54,7 +54,7 @@ const Video = () => {
                             </div>
                         </div>
                         <div>
-                            <iframe width="660" height="400" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe >
+                            <iframe width="660" height="400" src={url} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe >
                         </div>
                         <div className='w-[20%]'>
                             <div onClick={() => setUrl('https://www.youtube.com/embed/ZrXrE2TuEtQ?start=70')} className={`p-4 flex items-start gap-x-3 cursor-pointer rounded-lg ${url == "https://www.youtube.com/embed/ZrXrE2TuEtQ?start=70" ? 'activeVideo' : ''}`}>

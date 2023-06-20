@@ -7,10 +7,17 @@ import c4 from '../../assets/about/c4.jpg'
 import c5 from '../../assets/about/c5.jpg'
 import c6 from '../../assets/about/c6.jpg'
 import c7 from '../../assets/about/c7.jpg'
+import { useContext } from "react";
+import { NavbarContext } from "../../context/ContextProvider";
 
 
 // eslint-disable-next-line react/prop-types
 const Certificate = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     const certificates = [
         {
             id: 1,

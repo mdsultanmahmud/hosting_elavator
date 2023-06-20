@@ -4,8 +4,15 @@ import company from '../../assets/about/company1.webp'
 import company2 from '../../assets/about/company2.webp'
 import AboutButton from '../../components/AboutButton/AboutButton';
 import BannerBG from '../../components/BannerBG/BannerBG';
+import { useContext } from 'react';
+import { NavbarContext } from '../../context/ContextProvider';
 // eslint-disable-next-line react/prop-types
 const CompanyProfile = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     return (
         <div className='marginTop'>
             <BannerBG title={"Company Profile"} />
@@ -21,9 +28,9 @@ const CompanyProfile = () => {
                     <hr />
                     <div className='my-6'>
                         <h1>Hosting Company Video Overview</h1>
-                        {/* <iframe src="https://www.youtube.com/embed/kJiDuZJLdXQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/h9aGGwQXPKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/ZrXrE2TuEtQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> */}
+                        {/* <iframe src="https://www.youtube.com/embed/kJiDuZJLdXQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/h9aGGwQXPKw" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/ZrXrE2TuEtQ" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe> */}
                         <p>vidoe will be upload..</p>
                     </div>
                     <hr />

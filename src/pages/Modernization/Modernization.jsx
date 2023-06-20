@@ -1,7 +1,14 @@
 import BannerBG from '../../components/BannerBG/BannerBG';
 import './Modernization.css'
 import mod from '../../assets/others/modern.webp'
+import { NavbarContext } from '../../context/ContextProvider';
+import { useContext } from 'react';
 const Modernization = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     return (
         <div className='marginTop'>
             <BannerBG title={"Modernization"} />

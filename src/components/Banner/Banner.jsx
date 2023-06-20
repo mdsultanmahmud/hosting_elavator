@@ -3,7 +3,14 @@ import bannerOne from '../../assets/banner/bgOne.jpg'
 import bannerTwo from '../../assets/banner/bannerTwo.jpg'
 import bannerThree from '../../assets/banner/bannerThree.jpg'
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
+import { NavbarContext } from '../../context/ContextProvider';
 const Banner = () => {
+    const {isBanner, setIsBanner} = useContext(NavbarContext)
+    function change(){
+        setIsBanner(true)
+    }
+    change()
     return (
         <div className="carousel w-full z-0 h-[100vh]">
             <div id="slide1" className="carousel-item relative w-full">

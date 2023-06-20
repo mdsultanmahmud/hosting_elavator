@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import UpperNav from '../UpperNav/UpperNav';
 import logo from '../../assets/navbar/navbarLogo.png'
 import {FaBars} from 'react-icons/fa'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import './Navbar.css'
+import { NavbarContext } from '../../context/ContextProvider';
 const Navbar = () => {
+    const {isBanner} = useContext(NavbarContext)
     const [shownav, setShowNav] = useState(false)
+    // console.log(isBanner, setIsBanner)
     useEffect(() => {
         const handleScroll = () => {
             const scrollY = window.scrollY || window.pageYOffset;
@@ -78,22 +81,22 @@ const Navbar = () => {
         <li><Link to={"/agent"}>Agent</Link></li>
     </>
     return (
-        <div className={`fixed top-0 left-0 w-full z-10 shadow-lg bg-white`}>
-            <UpperNav prop={{shownav}}/>
+        <div className={`fixed top-0 left-0 w-full z-10 ${isBanner && !shownav  ? 'bg-transparent' : 'shadow-lg bg-white'} navContainer`}>
+            <UpperNav prop={{shownav, isBanner}}/>
             <div className="navbar container custom-nav">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <label tabIndex={0} className="lg:hidden fixed top-7 md:top-9 right-3 text-black font-bold">
                            <FaBars size={24}/>
                         </label>
-                        <ul tabIndex={0} className="text-[14px] menu menu-sm dropdown-content mt-8 p-8 bg-base-100  w-[100vw] ml-[-10px]  text-gray-500">
+                        <ul tabIndex={0} className={`text-[14px] menu menu-sm dropdown-content mt-8 p-8 bg-base-100  w-[100vw] ml-[-10px]  ${isBanner && !shownav  ? "text-white" : "text-black"}`}>
                             {menuList}
                         </ul>
                     </div>
                     <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[100px] w-[156px]' /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider text-black`}>
+                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider ${isBanner && !shownav  ? "text-white" : "text-black"}`}>
                         {menuList}
                     </ul>
                 </div>
