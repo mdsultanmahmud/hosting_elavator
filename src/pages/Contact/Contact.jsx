@@ -3,7 +3,14 @@ import { AiFillPhone, AiFillHome, AiOutlineGlobal } from 'react-icons/ai'
 import { CgMail, } from 'react-icons/cg'
 import ContactForm from '../../components/ContactForm/ContactForm';
 import BannerBG from '../../components/BannerBG/BannerBG';
+import { useContext } from 'react';
+import { NavbarContext } from '../../context/ContextProvider';
 const Contact = () => {
+    const {setIsBanner} = useContext(NavbarContext)
+    function changeNav(){
+        setIsBanner(false)
+    }
+    changeNav()
     return (
         <div className='marginTop'>
             <BannerBG title={"Contact Us"}/>

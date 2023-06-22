@@ -18,7 +18,7 @@ const Elevator = () => {
     return (
         <div>
             <div className='container'>
-                <div>
+                <div className=''>
                     <h1 className='title'>Promoting the world renowned global brand OTIS  in Bangladesh</h1>
 
                     <div className='mt-12 elevatorContent'>

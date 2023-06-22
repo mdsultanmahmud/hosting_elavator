@@ -4,6 +4,7 @@ import Elevator from "../../components/Elevator/Elevator";
 import ElevatorMenu from "../../components/ElevatorMenu/ElevatorMenu";
 import LatestNews from "../../components/LatestNews/LatestNews";
 import Quote from "../../components/Quote/Quote";
+import Shape from "../../components/Shape/Shape";
 import Video from "../../components/Video/Video";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
         <div>
             <Banner />
             <ElevatorMenu />
+            {/* <Shape/> */}
             <Elevator/>
             {/* <AllElevator/> */}
             <Video/>

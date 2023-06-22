@@ -2,13 +2,17 @@
 import { Link } from 'react-router-dom';
 import UpperNav from '../UpperNav/UpperNav';
 import logo from '../../assets/navbar/navbarLogo.png'
-import {FaBars} from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
+import { MdOutlineArrowDropDown } from 'react-icons/md'
+import {ImCross} from 'react-icons/im'
 import { useContext, useEffect, useState } from 'react';
 import './Navbar.css'
 import { NavbarContext } from '../../context/ContextProvider';
 const Navbar = () => {
-    const {isBanner} = useContext(NavbarContext)
+    const { isBanner } = useContext(NavbarContext)
     const [shownav, setShowNav] = useState(false)
+    const [showNested, setShowNested] = useState(false)
+    const [mdNav, setMdNav] = useState(false)
     // console.log(isBanner, setIsBanner)
     useEffect(() => {
         const handleScroll = () => {
@@ -27,83 +31,112 @@ const Navbar = () => {
         };
     }, []);
     const menuList = <>
-        <li><Link to={'/'}>Home</Link></li>
-        <li tabIndex={0}>
-            <details>
-                <summary>
-                    <Link to={'/company-profile'}>About</Link>
-                </summary>
-                <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><Link to={'/company-profile'}>Company Profile</Link></li>
-                    <li><Link to={'/factory-view'}>Factory View</Link></li>
-                    <li><Link to={'/certificate'}>Certificates</Link></li>
-                    <li><Link to={'/faq'}>FAQ</Link></li>
-                    <li><Link to={'/video'}>Video</Link></li>
-                </ul>
-            </details>
+        <li><Link onClick={() => setMdNav(false)} to={'/'}>Home</Link></li>
+        <li>
+            <div className='flex gap-x-1 items-center'>
+                <Link onClick={() => setMdNav(false)} to={'/company-profile'}>About</Link>
+                <MdOutlineArrowDropDown onClick={() => {
+                    if (showNested == 'about') {
+                        setShowNested(false)
+                    } else {
+                        setShowNested('about')
+                    }
+                }} size={30} className="icon"/>
+            </div>
+            <ul className={`${showNested === 'about' ? 'activeNested' : ''}`}>
+                <li><Link onClick={() => setMdNav(false)} to={'/company-profile'}>Company Profile</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/factory-view'}>Factory View</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/certificate'}>Certificates</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/faq'}>FAQ</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/video'}>Video</Link></li>
+            </ul>
         </li>
-        <li tabIndex={0}>
-            <details>
-                <summary>
-                    <Link to={'/products'}>Products</Link>
-                </summary>
-                <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><Link to={'/passenger-elevator'}>Passenger Elevator</Link></li>
-                    <li><Link to={'/home-elevator'}>Home Elevator</Link></li>
-                    <li><Link to={'/panoramic-elevator'}>Panoramic Elevator</Link></li>
-                    <li><Link to={'/hospital-elevator'}>Hospital Elevator</Link></li>
-                    <li><Link to={'/freight-elevator'}>Freight Elevator</Link></li>
-                    <li><Link to={'/escalators-moving-walks'}>Escalators & Moving Walks</Link></li>
-                </ul>
-            </details>
+        <li>
+            <div className='flex gap-x-1 items-center'>
+                <Link onClick={() => setMdNav(false)} to={'/products'}>Products</Link>
+                <MdOutlineArrowDropDown onClick={() => {
+                    if (showNested == 'products') {
+                        setShowNested(false)
+                    } else {
+                        setShowNested('products')
+                    }
+                }} size={30} className="icon"/>
+            </div>
+
+            <ul className={`${showNested === 'products' ? 'activeNested' : ''}`}>
+                <li><Link onClick={() => setMdNav(false)} to={'/passenger-elevator'}>Passenger Elevator</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/home-elevator'}>Home Elevator</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/panoramic-elevator'}>Panoramic Elevator</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/hospital-elevator'}>Hospital Elevator</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/freight-elevator'}>Freight Elevator</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/escalators-moving-walks'}>Escalators & Moving Walks</Link></li>
+            </ul>
         </li>
-        <li><Link to={'/modernization'}>Modernization</Link></li>
-        <li tabIndex={0}>
-            <details>
-                <summary><Link to={'/projects'}>Projects</Link></summary>
-                <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><a>Overeases Project</a></li>
-                    <li><a>Domestic Project</a></li>
-                </ul>
-            </details>
+        <li><Link onClick={() => setMdNav(false)} to={'/modernization'}>Modernization</Link></li>
+        <li>
+            <div className='flex gap-x-1 items-center'>
+                <Link onClick={() => setMdNav(false)} to={'/projects'}>Projects</Link>
+                <MdOutlineArrowDropDown onClick={() => {
+                    if (showNested == 'project') {
+                        setShowNested(false)
+                    } else {
+                        setShowNested('project')
+                    }
+                }} size={30} className="icon"/>
+            </div>
+
+            <ul className={`${showNested === 'project' ? 'activeNested' : ''}`}>
+                <li><Link onClick={() => setMdNav(false)} to={'/'}>Overeases Project</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/'}>Domestic Project</Link></li>
+            </ul>
         </li>
-        <li><Link to={"/download"}>Download</Link></li>
-        <li tabIndex={0}>
-            <details>
-                <summary><Link to={'/blog'}>Blog</Link></summary>
-                <ul className="p-2 text-gray-500 text-[16px]">
-                    <li><a>Exhibition and news</a></li>
-                    <li><a>Articles</a></li>
-                </ul>
-            </details>
+        <li><Link onClick={() => setMdNav(false)} to={"/download"}>Download</Link></li>
+        <li>
+            <div className='flex gap-x-1 items-center'>
+                <Link onClick={() => setMdNav(false)} to={'/blog'}>Blog</Link>
+                <MdOutlineArrowDropDown onClick={() => {
+                    if (showNested == 'blog') {
+                        setShowNested(false)
+                    } else {
+                        setShowNested('blog')
+                    }
+                }} size={30} className="icon"/>
+            </div>
+
+            <ul className={`${showNested === 'blog' ? 'activeNested' : ''}`}>
+                <li><Link onClick={() => setMdNav(false)} to={'/'}>Exhibition and news</Link></li>
+                <li><Link onClick={() => setMdNav(false)} to={'/'}>Articles</Link></li>
+            </ul>
 
         </li>
-        <li><Link to={"/agent"}>Agent</Link></li>
+        <li><Link onClick={() => setMdNav(false)} to={"/agent"}>Agent</Link></li>
     </>
     return (
-        <div className={`fixed top-0 left-0 w-full z-10 ${isBanner && !shownav  ? 'bg-transparent' : 'shadow-lg bg-white'} navContainer`}>
-            <UpperNav prop={{shownav, isBanner}}/>
-            <div className="navbar container custom-nav">
-                <div className="navbar-start">
-                    <div className="dropdown">
-                        <label tabIndex={0} className="lg:hidden fixed top-7 md:top-9 right-3 text-black font-bold">
-                           <FaBars size={24}/>
-                        </label>
-                        <ul tabIndex={0} className={`text-[14px] menu menu-sm dropdown-content mt-8 p-8 bg-base-100  w-[100vw] ml-[-10px]  ${isBanner && !shownav  ? "text-white" : "text-black"}`}>
+        <div className={`fixed top-0 left-0 w-full z-10 ${isBanner && !shownav ? 'bg-white lg:bg-transparent' : 'shadow-lg bg-white'}`}>
+            <UpperNav prop={{ shownav, isBanner }} />
+            <header className='container'>
+                <nav className={`custom-nav  ${isBanner && !shownav ? 'bg-white lg:bg-transparent hoverEffect' : 'bg-white'}`}>
+                    <div>
+                        <Link onClick={() => setMdNav(false)} to={'/'}><img src={logo} alt="logo of the website" className='h-[100px] w-[156px]' /></Link>
+                    </div>
+                    <div className='hidden lg:block'>
+                        <ul>
                             {menuList}
                         </ul>
                     </div>
-                    <Link to={'/'}><img src={logo} alt="logo of the website" className='h-[100px] w-[156px]' /></Link>
-                </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className={`text-[14px] menu menu-horizontal px-1 font-bold tracking-wider ${isBanner && !shownav  ? "text-white" : "text-black"}`}>
+                    <div className='flex items-center gap-x-4'>
+                        <Link className='primaryButton  rounded-xl md:rounded-2xl' to={'/contact'}>Contact Us</Link>
+                        {!mdNav && <FaBars onClick={() => setMdNav(true)} size={24} className='lg:hidden cursor-pointer'/>}
+                        {mdNav && <ImCross onClick={() => setMdNav(false)} size={24} className='lg:hidden cursor-pointer'/>}
+                        
+                    </div>
+                </nav>
+                <div className={`lg:hidden responsiveNav ${mdNav ? 'activeNavbar' : ''} `}>
+                    <ul>
                         {menuList}
                     </ul>
                 </div>
-                <div className="navbar-end">
-                    <Link className='mr-[3rem] lg:mr-0 primaryButton  rounded-xl md:rounded-2xl' to={'/contact'}>Contact Us</Link>
-                </div>
-            </div>
+            </header>
         </div>
     );
 };

@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <footer className="footer-container">
             <div className="container p-4 lg:p-0">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-12 gap-8">
+                <div className="grid grid-cols-1  md:grid-cols-3 py-12 gap-8">
                     <div>
                         <img src={logo} alt="logo of the company" width={156} height={56} />
                         <p className="mb-2"><span> House 664/A, Road # 09 (Main Road), DOHS Mirpur, Dhaka – 1216.</span></p>
@@ -41,7 +41,7 @@ const Footer = () => {
                     </div>
                 </div>
                 {/* footer under section  */}
-                <div className="flex items-center justify-between py-8 lowerFooter">
+                <div className="flex flex-col lg:flex-row gap-y-4 items-center justify-between py-8 lowerFooter">
                     <ul className="flex gap-x-4 items-center">
                         <li>&copy; 2018 Ningbo Hosting Elevator Co., Ltd. </li>
                         <li>RELATED ARTICLES</li>
