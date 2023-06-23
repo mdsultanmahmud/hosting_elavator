@@ -8,6 +8,9 @@ import {ImCross} from 'react-icons/im'
 import { useContext, useEffect, useState } from 'react';
 import './Navbar.css'
 import { NavbarContext } from '../../context/ContextProvider';
+import { BsTwitter } from 'react-icons/bs';
+import { CiFacebook } from 'react-icons/ci';
+import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai';
 const Navbar = () => {
     const { isBanner } = useContext(NavbarContext)
     const [shownav, setShowNav] = useState(false)
@@ -135,6 +138,12 @@ const Navbar = () => {
                     <ul>
                         {menuList}
                     </ul>
+                    <div className='flex items-center justify-center gap-x-4 my-6'>
+                            <CiFacebook size={34} className='hover:text-red-500 cursor-pointer icon' />
+                            <BsTwitter size={34} className='hover:text-red-500 cursor-pointer icon' />
+                            <AiOutlineInstagram size={34} className='hover:text-red-500 cursor-pointer icon' />
+                            <AiOutlineYoutube size={34} className='hover:text-red-500 cursor-pointer icon' />
+                        </div>
                 </div>
             </header>
         </div>

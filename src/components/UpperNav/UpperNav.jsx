@@ -3,8 +3,6 @@ import { IoMdCall } from 'react-icons/io'
 import { CiFacebook } from 'react-icons/ci'
 import { BsTwitter } from 'react-icons/bs'
 import { AiOutlineInstagram, AiOutlineYoutube } from 'react-icons/ai'
-import ukFlag from '../../assets/navbar/uk_flag.png'
-import esFlag from '../../assets/navbar/es_flag.png'
 import '../Navbar/Navbar.css'
 // eslint-disable-next-line react/prop-types
 const UpperNav = ({ prop }) => {
@@ -21,14 +19,14 @@ const UpperNav = ({ prop }) => {
                         <span>|</span>
                         <p className='flex items-center gap-x-1'><IoMdCall /> <span>88-02-44806324</span></p>
                     </div>
-                    <div className={`flex gap-x-12 items-center ${isBanner && !shownav ? "text-white" : "text-black"}`}>
+                    <div className={`${isBanner && !shownav ? "text-white" : "text-black"}`}>
                         <div className='flex items-center gap-x-2'>
                             <CiFacebook size={22} className='hover:text-red-500 cursor-pointer icon' />
                             <BsTwitter size={22} className='hover:text-red-500 cursor-pointer icon' />
                             <AiOutlineInstagram size={22} className='hover:text-red-500 cursor-pointer icon' />
                             <AiOutlineYoutube size={22} className='hover:text-red-500 cursor-pointer icon' />
                         </div>
-                        <div>
+                        {/* <div>
                             <div className="dropdown">
                                 <label tabIndex={0} className="m-1">Select</label>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -37,7 +35,7 @@ const UpperNav = ({ prop }) => {
                                     <li><button className='flex items-center gap-x-2'><img src={ukFlag} className='w-[26px] h-[17px]' /><span>لعربية</span></button></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <hr className='mt-3'/>

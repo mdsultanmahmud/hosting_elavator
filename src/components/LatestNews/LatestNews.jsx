@@ -10,8 +10,12 @@ import n3 from '../../assets/banner/news3.webp'
 import n4 from '../../assets/banner/news4.webp'
 import Card from './Card';
 import { Link } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
+import { ImCross } from 'react-icons/im';
+import { IoMdArrowDropdown } from 'react-icons/io';
 const LatestNews = () => {
     const [showTab, setShowTab] = useState("latest")
+    const [showBtn, setShowBtn] = useState(false)
     const latest = [
         {
             img: ltOne,
@@ -68,7 +72,24 @@ const LatestNews = () => {
         <div className='my-16'>
             <div className='container'>
                 <div className='content'>
-                    <div className='flex gap-x-12 mb-8 items-center justify-center'>
+                    <div className='button-container lg:hidden'>
+                        <div onClick={() => setShowBtn(!showBtn)} className='flex justify-between py-2 px-4 border border-gray-500 rounded'>
+                            {
+                                !showBtn ?
+                                    <FaBars size={24} />
+                                    :
+                                    <ImCross size={20} />
+                            }
+                            <h3 className='text-gray-500 text-[12px] flex items-center gap-x-6'><IoMdArrowDropdown size={24} /> <span>Menu</span></h3>
+                        </div>
+                        <div className={`all-button ${showBtn ? 'activeAllBtn' : ''}`}>
+                            <h2 onClick={() => setShowTab("latest")} className={`${showTab == 'latest' ? "active" : ''}`}>Latest</h2>
+                            <h2 onClick={() => setShowTab("news")} className={`${showTab == 'news' ? "active" : ''}`}>Exhibition & News</h2>
+                        </div>
+                    </div>
+                    
+                    
+                    <div className='hidden lg:flex gap-x-12 mb-8 items-center justify-center'>
                         <h2 onClick={() => setShowTab("latest")} className={`${showTab == 'latest' ? "active" : ''}`}>Latest</h2>
                         <h2 onClick={() => setShowTab("news")} className={`${showTab == 'news' ? "active" : ''}`}>Exhibition & News</h2>
                     </div>

@@ -72,6 +72,30 @@ h1,h2,h3,h4,h5,h6,p,li,a,button{
     z-index: 0;
 }
 
+/* handle menubar inside the page  */
+
+.all-button button, .all-button h2{
+    display: block;
+    margin-top: 0.5rem;
+    padding: 0.3rem;
+}
+ .all-button .active {
+    background: white;
+    color: red!important;
+    border-bottom: 1px solid red;
+    width: 100%;
+    text-align: left;
+}
+ .all-button {
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.2s;
+}
+ .activeAllBtn{
+    max-height: 300px !important;
+}
+
+
 @media screen and (max-width:992px) {
     .primaryTitle {
         font-size: 30px;

@@ -42,7 +42,7 @@ const Footer = () => {
                 </div>
                 {/* footer under section  */}
                 <div className="flex flex-col lg:flex-row gap-y-4 items-center justify-between py-8 lowerFooter">
-                    <ul className="flex gap-x-4 items-center">
+                    <ul className="flex flex-wrap gap-x-4 items-center">
                         <li>&copy; 2018 Ningbo Hosting Elevator Co., Ltd. </li>
                         <li>RELATED ARTICLES</li>
                         <li><Link>SiteMap.html</Link></li>

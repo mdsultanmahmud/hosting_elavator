@@ -12,7 +12,7 @@ const Banner = () => {
     }
     change()
     return (
-        <div className="carousel w-full z-0 h-[70vh] lg:h-[90vh]">
+        <div className="carousel w-full z-0 h-[80vh] lg:h-[90vh]">
             <div id="slide1" className="carousel-item relative w-full">
                 <img src={bannerOne} className="w-full" />
                 <div className='bg-color'></div>

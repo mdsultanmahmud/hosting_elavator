@@ -30,32 +30,13 @@
     font-size: 18px;
     font-weight: 400;
 }
-.icon{
+/* .icon{
     padding: .3rem;
     border-radius: 50%;
     background-color: #62e0e4;
     color: white;
-}
+} */
 
-.allElevator-content .all-button button{
-    display: block;
-    margin-top: 0.3rem;
-}
-.allElevator-content .all-button .active {
-    background: white;
-    color: red!important;
-    border-bottom: 1px solid red;
-    width: 100%;
-    text-align: left;
-}
-.allElevator-content .all-button {
-    max-height: 0;
-    overflow: hidden;
-    transition: all ease-in-out 0.2s;
-}
-.allElevator-content .activeAllBtn{
-    max-height: 300px !important;
-}
 @media screen and (max-width:992px) {
     .text-content h2{
         font-size: 12px;
